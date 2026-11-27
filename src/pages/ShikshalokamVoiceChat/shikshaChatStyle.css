@@ -1134,6 +1134,16 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Logged-in layout: LoggedInChatSidebar is 260px wide from md (768px) up.
+   Keep the docked input inside the chat area so it doesn't cover the sidebar. */
+@media (min-width: 768px) {
+  .chat-bottom-docked-container--with-sidebar {
+    left: 260px;
+    right: 0;
+    width: auto;
+  }
+}
+
 .chat-bottom-docked-container .chat-input-row {
   position: static;
   box-shadow: none;
