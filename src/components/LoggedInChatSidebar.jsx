@@ -67,7 +67,8 @@ export default function LoggedInChatSidebar({ userName, onNewChat, onProfile, on
       </button>
 
       {isOpen && (
-        <div className="md:hidden fixed inset-0 z-50 flex">
+        // z-[60]: above the docked chat input (z-index 50) so the drawer's bottom buttons stay visible
+        <div className="md:hidden fixed inset-0 z-[60] flex">
           <aside className="w-[80%] max-w-[300px] h-dvh overflow-x-hidden bg-white flex flex-col">
             <div className="flex justify-end p-3 pb-0 shrink-0">
               <button type="button" onClick={close} aria-label="Close menu">

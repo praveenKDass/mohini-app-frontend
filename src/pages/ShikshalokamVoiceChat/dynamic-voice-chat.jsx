@@ -3156,7 +3156,7 @@ const DynamicVoiceChat = ({ type = "" }) => {
         <Notification />
 
         {(!showFileInput || showFileInput === null) && !isLoading && !endStoryMutation.isPending && (llmError === "" || !llmError) && Array.isArray(chatHistory) && chatHistory.some(item => item && Object.keys(item).length > 0) && (
-          <div className="chat-bottom-docked-container">
+          <div className={`chat-bottom-docked-container ${accessToken ? "chat-bottom-docked-container--with-sidebar" : ""}`}>
             {shouldShowMCQ && (
               <MultipleChoiceQuestions
                 validations={activeValidations}
